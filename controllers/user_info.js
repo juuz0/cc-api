@@ -9,7 +9,8 @@ module.exports = (req,res)=>{
               status:"FAILED",
               res:[]
           }))
-        await page.goto(url, {waitUntil:'domcontentloaded'})
+        try{
+        await page.goto(url, {waitUntil:'domcontentloaded',timeout:0})
         await page.waitForSelector('.user-details')
         let h = await page.$$eval('.user-details > ul > li', lis=>{
           const UserDetailsArray = []
@@ -38,6 +39,13 @@ module.exports = (req,res)=>{
             status:"OK",
             res:h
         })
+      }
+      catch(e){
+        res.json({
+          status:"FAILED",
+          res:[]
+      })
+      }
         await browser.close();
       })()
 }
