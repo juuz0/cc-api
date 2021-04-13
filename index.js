@@ -1,7 +1,11 @@
 const express = require('express')
 const app = express()
+const puppeteer = require('puppeteer');
+
 
 const user_rating = require('./controllers/user_rating')
+const user_info = require('./controllers/user_info')
+const user_submissions = require('./controllers/user_submissions')
 
 app.get('/user.rating',user_rating)
 
