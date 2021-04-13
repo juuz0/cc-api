@@ -16,6 +16,11 @@ module.exports = (req,res)=>{
           UserDetailsArray.push({
             Name : document.querySelector('.user-details-container > header').innerText
           })
+          UserDetailsArray.push({
+            Rating : document.querySelector('.rating-number').textContent
+          })
+
+          
           for(li of lis){
             const key = li.querySelector('label').textContent.replace(/:$/g,'')
             let val = li.querySelector('span')
