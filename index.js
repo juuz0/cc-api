@@ -10,7 +10,6 @@ const user_submissions = require('./controllers/user_submissions')
 app.get('/user.rating',user_rating)
 
 app.get('/user.info', user_info)
-
 app.get('/user.subs', user_submissions)
 
 const port = process.env.port || 3000
