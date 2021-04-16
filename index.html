@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Codechef API by Nikhil ( juuz0 )</h1>
+    <div id="introo">
+    Send a HTTP-request to <code>https://codec-api.herokuapp.com/{method}</code>. Each method requires - 
+    <ul id="intro">
+        <li> <b>handle</b> - for account name </li>
+        <li> <b>count [optional] </b>- to limit the results (not available in user.info)</li>
+    </ul>
+    <br> and returns a JSON-object containing - 
+    <ul id="intro">
+        <li> <b>status</b> - OK/FAILED </li>
+        <li> <b>res (array) </b> - the required result in JSON-format enclosed in an array </li>
+    </ul>
+</div>
+<hr>
+    <div class="main"> 
+    <div class="elem">
+        <p class="command"><b>user.info</b></p>
+        <p>Basic information about the user - rating, username, country, state, city, institution, profession</p>
+        <p>Usage(Example) - https://codec-api.herokuapp.com/user.info?handle=account_name ( <a href="https://codec-api.herokuapp.com/user.info?handle=gennady.korotkevich">https://codec-api.herokuapp.com/user.info?handle=gennady.korotkevich</a> )</p>
+    </div>
+    <hr>
+    <div class="elem">
+        <p class="command"><b>user.subs</b></p>
+        <p>Submissions by the user</p>
+        <p>Usage(Example) - https://codec-api.herokuapp.com/user.subs?handle=account_name&count=number ( <a href="https://codec-api.herokuapp.com/user.subs?handle=gennady.korotkevich&count=25">https://codec-api.herokuapp.com/user.subs?handle=gennady.korotkevich&count=25</a> ) </p>
+    </div>
+    <hr>
+    </div>
+    <footer>
+      <a href="https://github.com/juuz0/cc-api" class='hideTextDeco' target="_blank"> Find on GitHub &nbsp;&nbsp;  <i class="fab fa-github" style="margin: 5px;"></i> </a> 
+    </footer>
+    <style>
+        li{
+            display: inline;
+        }
+        li:nth-child(2){
+            margin-left: 20%;
+        }
+        ul{
+            text-align: center;
+        }
+        #introo{
+            padding: 15px;
+        }
+        body{
+            border:0;
+            margin:0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            width: 100%;
+            text-align: center;
+            font-family: 'Roboto';
+        }
+        .main{
+            scroll-behavior: smooth;
+        }
+        .hrr{
+            width: auto;
+            text-align: center;
+        }
+        hr{
+            width: 50%;
+            color: #222;
+        }
+        .elem{
+            margin-top: 10px;
+            width: auto;
+            height: auto;
+            padding: 10px;
+            /* background-color: #222; */
+        }
+        .command{
+            font-size: 20px;
+            color: rgb(16, 182, 85);
+            font-family: 'Roboto';
+            font-weight: 900;
+        }
+        code{
+            color: rgb(221, 144, 29);
+           
+            padding: 2px;
+            
+        }
+        footer{
+            position: fixed;
+            bottom: 0;
+            height: 5%;
+            width: 100%;
+            background-color: #222;
+            color: aliceblue;
+            font-size: 25px;
+            font-family: 'Roboto';
+            text-align: center;
+            vertical-align: middle;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            
+        }
+        a, a:visited, a:hover, a:active {
+  color: inherit;
+  vertical-align: middle;
+            
+}
+.hideTextDeco{
+    text-decoration: none;
+}
+    </style>
+</body>
+</html>
