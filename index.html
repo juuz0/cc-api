@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/roboto-font@0.1.0/css/fonts.min.css">
+    <title>CodeChef API</title>
 </head>
 <body>
     <h1>Codechef API by Nikhil ( juuz0 )</h1>
     <div id="introo">
-    Send a HTTP-request to <code>https://codec-api.herokuapp.com/{method}</code>. Each method requires - 
+    Send a HTTP-request to <code>/{method}</code>. Each method requires - 
     <ul id="intro">
         <li> <b>handle</b> - for account name </li>
         <li> <b>count [optional] </b>- to limit the results (not available in user.info)</li>
@@ -28,13 +27,13 @@
     <div class="elem">
         <p class="command"><b>user.info</b></p>
         <p>Basic information about the user - rating, username, country, state, city, institution, profession</p>
-        <p>Usage(Example) - https://codec-api.herokuapp.com/user.info?handle=account_name ( <a href="https://codec-api.herokuapp.com/user.info?handle=gennady.korotkevich">https://codec-api.herokuapp.com/user.info?handle=gennady.korotkevich</a> )</p>
+        <p>Usage(Example) - /user.info?handle=account_name ( <a href="/user.info?handle=gennady.korotkevich">/user.info?handle=gennady.korotkevich</a> )</p>
     </div>
     <hr>
     <div class="elem">
         <p class="command"><b>user.subs</b></p>
         <p>Submissions by the user</p>
-        <p>Usage(Example) - https://codec-api.herokuapp.com/user.subs?handle=account_name&count=number ( <a href="https://codec-api.herokuapp.com/user.subs?handle=gennady.korotkevich&count=25">https://codec-api.herokuapp.com/user.subs?handle=gennady.korotkevich&count=25</a> ) </p>
+        <p>Usage(Example) - /user.subs?handle=account_name&count=number ( <a href="/user.subs?handle=gennady.korotkevich&count=25">/user.subs?handle=gennady.korotkevich&count=25</a> ) </p>
     </div>
     <hr>
     </div>
@@ -57,7 +56,7 @@
         body{
             border:0;
             margin:0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto';
         }
         h1{
             width: 100%;

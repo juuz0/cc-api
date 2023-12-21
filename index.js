@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const path = require('path')
 
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
+
 //const user_rating = require('./controllers/user_rating')
 const user_info = require('./controllers/user_info')
 const user_submissions = require('./controllers/user_submissions')
